@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Nutmeg Headline Bold';
+    src: url('nutmeg-headline-bold.ttf') format('opentype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+    background-color: #18181B;
+}
+
+.buttons{
+    border-radius: 75px;
+    border: solid 2px #09f;
+    margin: 30px 460px auto 460px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .bton{
+    display: flex;
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    margin-top: 17px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: 'Nutmeg Headline Bold';
+}
+
+.buttons .bton::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0f5d9181;
+    transition: all 0.3s ease;
+}
+
+.buttons .bton:hover::after{
+    width: 70%;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 90%;
+    margin-top: 40px;
+    inset: 0;
+    position: relative;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.card{
+    padding: 3rem 2rem;
+    background-color: #0f5d9181;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #09f;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.box .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Nutmeg Headline Bold';
+}
+.box .card h3{
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: 'Nutmeg Headline Bold';
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.box .card p, i {
+    color: white;
+    font-size: 15px;
+    margin-right: 0.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.box .card:hover {
+    background-color: #0f5d91;
+    border-color: #09f;
+}
+.cardHidden{
+    display: none;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}

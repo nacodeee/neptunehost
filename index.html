@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <title>NeptuneHost | Minecraft Hosting, Java, Bedrock, Spigot, Bukkit, Paper, PaperSpigot, Survival, BungeeCord, Avanzado, Intermedio, Basico, Ryzen, AMD, Intel, Xeon</title>
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="images/logo.png">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="#">Products</a></li>
+            <li id="link1" class="link"><a href="#">Domains</a></li>
+            <li id="link2" class="link"><a href="#">Website & Security</a></li>
+            <li id="link3" class="link"><a href="#">Support</a></li>
+        </ul>
+        <button class="btn">Login</button>
+    </nav>
+
+    <h2 class="header">Planes de Minecraft Hosting</h2>
+    <p class="sub-header">
+        Nuestros planes ofrecen diferentes tipos de caracteristicas, 
+        adaptables a tus necesidades y presupuesto.<br>
+        <strong>¡Elige el que más te guste!</strong>
+    </p>
+
+    <div class="button-container">
+        <div class="buttons">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <button class="bton" value="Basic" data-id="basic">Básico</button>
+            <button class="bton" value="Intermedio" data-id="intermedio">Intermedio</button>
+            <button class="bton" value="avanzado" data-id="avanzado">Avanzado</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="card cardHidden" id="basic">
+                <h4>Plan Básico</h4>
+                <h3>Desde 2$/mes</h3>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    CPU: AMD Ryzen 9 3900X @ 4.50 GHz
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    RAM: DDR4 @ 2666MHz
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Almacenamiento: NVMe PCIe 4.0
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    100 Gb/s Anti-DDoS
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Soporte 24/7
+                </p>
+            </div>
+
+            <div class="card" id="intermedio">
+                <h4>Plan Intermedio</h4>
+                <h3>Desde 3$/mes</h3>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    CPU: Intel® Xeon® Gold 6240 @ 2.60 GHz
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    RAM: DDR4 @ 2933MHz
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Almacenamiento: SSD
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    100 Gb/s Anti-DDoS
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Soporte 24/7
+                </p>
+            </div>
+
+            <div class="card cardHidden" id="avanzado">
+                <h4>Plan Avanzado</h4>
+                <h3>Desde 5$/mes</h3>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    CPU: AMD Ryzen 9 5900X @ 4.80 GHz
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    RAM: DDR4 @ 3200MHz
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Almacenamiento: NVMe PCIe 4.0
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    100 Gb/s Anti-DDoS
+                </p>
+                <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Soporte 24/7
+                </p>
+        </div>
+
+    <script>
+        const buttons =  document.querySelectorAll(".bton");
+        const cards = document.querySelectorAll(".card");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", e => {
+                cards.forEach(card => {
+                    card.classList.add("cardHidden");
+                });
+                const id = e.target.getAttribute("data-id");
+                document.getElementById(id).classList.remove("cardHidden");
+            });
+        });
+    </script>
+</body>
+</html>
